@@ -1,0 +1,149 @@
+@import "../.././../scss/variables.scss";
+
+.read-more-container {
+  min-width: 350px;
+  height: 100vh;
+  background: $main-10;
+  color: $main-1;
+  display: flex;
+  flex-direction: column;
+
+  .read-more-header-container {
+    padding: 27px 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .read-more-main-container {
+    padding: 0 34px;
+    padding-top: 22px;
+    min-height: max-content;
+    height: calc(100vh - 85px);
+    position: relative;
+    overflow-y: auto;
+
+    .comment-heading {
+      display: flex;
+      align-items: center;
+      margin-bottom: 28px;
+      img {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        margin-right: 12px;
+      }
+      .username {
+        font-weight: $font-weight-1;
+        font-size: $font-size-small;
+        margin-bottom: 4px;
+      }
+      .comment-date {
+        font-size: $font-size-small;
+        font-weight: $font-weight-4;
+        color: $main-2;
+      }
+    }
+
+    .track-review-pending {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100% - 40px);
+      .pending {
+        width: 90px;
+        height: 24px;
+        border: 1px solid $main-2;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 12px;
+        text-transform: uppercase;
+      }
+    }
+
+    .track-rating {
+      padding-bottom: 34px;
+      &-title {
+        font-size: $font-size-small;
+        font-weight: $font-weight-4;
+        color: rgba($main-1, 0.5);
+        margin-bottom: 16px;
+      }
+    }
+    .track-promote-playlist {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      &-key {
+        color: rgba($main-1, 0.5);
+        font-size: $font-size-small;
+        font-weight: $font-weight-4;
+      }
+      &-value {
+        font-size: $font-size-normal;
+        font-weight: 500;
+      }
+    }
+
+    .track-detail-comment-text {
+      padding-top: 8px;
+      font-size: $font-size-normal;
+      font-weight: 300;
+      width: 284px;
+      line-height: 24px;
+    }
+    .track-detail-comment-read-more {
+      color: $main-2;
+      font-size: $font-size-normal;
+      font-weight: $font-weight-1;
+      padding-top: 24px;
+    }
+
+    .influencer-feedback {
+      .subtitle {
+        padding: 22px 0 16px 0;
+        font-size: 12px;
+        font-weight: 400;
+        color: $main-5;
+      }
+    }
+
+    .artist-feedback {
+      padding-bottom: 12px;
+      .subtitle {
+        padding: 34px 0 12px 0;
+        font-size: 14px;
+        font-weight: 400;
+        color: $main-2;
+      }
+      .feedback {
+        font-size: 14px;
+        font-weight: 400;
+        color: $main-1;
+      }
+    }
+
+    .rate-review-button {
+      padding: 24px 0;
+      .rate-review {
+        min-width: unset;
+        width: 100%;
+        height: 44px;
+        border: 1px solid #c8a86b;
+        background: transparent;
+        box-sizing: border-box;
+        border-radius: 6px;
+        color: $main-1;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}

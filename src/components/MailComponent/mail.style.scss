@@ -1,0 +1,123 @@
+@import "../../scss/variables.scss";
+$mobile_breakpoint: 670px;
+
+.mail-container {
+  display: flex;
+  .mail-left-side {
+    width: 318px;
+    background: #0c0c10;
+    height: calc(100vh - 75px);
+    overflow-y: auto;
+    padding-top: 42px;
+    box-sizing: border-box;
+
+    @media (max-width: $mobile_breakpoint) {
+      display: none;
+      &.show-on-mobile {
+        display: block;
+      }
+      width: 100%;
+    }
+
+    .mail-list-item {
+      display: flex;
+      margin-bottom: 24px;
+      align-items: center;
+      cursor: pointer;
+
+      border-left: 4px solid transparent;
+
+      &.active {
+        border-color: $main-2;
+      }
+
+      .mail-image {
+        padding-left: 36px;
+        padding-right: 16px;
+        img {
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+        }
+      }
+
+      .mail-subject {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+      }
+
+      .mail-from {
+        font-size: 12px;
+        font-weight: 400;
+        color: rgba($main-1, 0.8);
+        line-height: 15px;
+        padding-bottom: 2px;
+      }
+
+      .mail-time {
+        color: rgba($main-2, 0.8);
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .mail-right-side {
+    flex: 1;
+    .view-mail-navbar {
+      height: 68px;
+      display: none;
+      align-items: center;
+      border-bottom: 1px solid $main-12;
+      padding-left: 40px;
+
+      @media (max-width: $mobile_breakpoint) {
+        display: flex;
+      }
+    }
+
+    .view-mail-wrapper {
+      padding: 0 34px;
+      width: 903px;
+      box-sizing: border-box;
+
+      @media (max-width: 1277px) {
+        width: 100%;
+      }
+    }
+
+    .view-mail-header {
+      padding-top: 40px;
+      padding-bottom: 34px;
+      border-bottom: 1px solid $main-12;
+
+      .mail-subject {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        padding-bottom: 6px;
+      }
+
+      .mail-from {
+        font-size: 12px;
+        font-weight: 400;
+        color: rgba($main-1, 0.8);
+        line-height: 15px;
+        padding-bottom: 6px;
+      }
+
+      .mail-time {
+        color: rgba($main-2, 0.8);
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+
+    .view-mail-body {
+      padding-top: 34px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

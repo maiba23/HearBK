@@ -1,0 +1,49 @@
+@import "../../scss/variables.scss";
+
+.header-root-container {
+  display: flex;
+  align-items: center;
+  .header-text-container {
+    opacity: 0.8;
+    color: $main-1;
+    font-size: $font-size-normal;
+    line-height: 200%;
+    padding-left: 24px;
+  }
+}
+.accordion-container {
+  background-color: $main-9 !important;
+  padding: 10px 0px !important;
+  border-bottom: 1px solid #eef0fa33;
+  .subrole-root-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    // gap: 10px;
+    padding: 0px;
+    margin: 0px;
+    .role-button-container {
+      height: 44px;
+      border-radius: 8px;
+      background: $main-11;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      .subrole-text {
+        color: $main-1;
+        font-size: $font-size-normal;
+        line-height: 200%;
+        padding: 0px 20px;
+      }
+      .selected-subrole-text {
+        color: #000000;
+      }
+    }
+    .role-button-selected-container {
+      background: $main-2;
+    }
+  }
+}

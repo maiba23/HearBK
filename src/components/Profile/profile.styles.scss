@@ -1,0 +1,224 @@
+@import "../../scss/variables.scss";
+
+.profile-container {
+  min-width: 350px;
+  height: 100vh;
+  background: $main-10;
+  color: $main-1;
+  display: flex;
+  flex-direction: column;
+  .profile-header-container {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .follow-un-follow-button {
+      width: 84px;
+      height: 34px;
+      background: $main-11;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      font-size: $font-size-small;
+      cursor: default;
+    }
+    .followed-button {
+      background: $main-2;
+    }
+  }
+  .profile-main-container {
+    padding: 25px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    overflow-y: scroll;
+    align-items: center;
+    justify-content: space-between;
+    min-height: max-content;
+    height: calc(100vh - 85px);
+    .profile-img {
+      width: 134px;
+      height: 134px;
+      border-radius: 120px;
+    }
+    .profile-name-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 35px;
+      min-height: max-content;
+      .name-sub-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .profile-name {
+          font-weight: 600;
+          font-size: $font-size-l;
+          line-height: 22px;
+          margin-right: 10px;
+        }
+        .profile-track-number {
+          font-size: $font-size-small;
+          line-height: 15px;
+          margin-left: 10px;
+        }
+      }
+    }
+    .profile-followers-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 25px 0px;
+      border-bottom: 1px solid $main-13;
+      .followers-button {
+        width: 47%;
+        height: 44px;
+        background: $main-11;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .followers-txt {
+          font-size: 12px;
+          line-height: 15px;
+          margin-bottom: 3px;
+          opacity: 0.5;
+        }
+        .followers-number {
+          font-size: $font-size-normal;
+          line-height: 17px;
+        }
+      }
+    }
+    .send-me-section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 25px 0px;
+      border-bottom: 1px solid $main-13;
+      min-height: max-content;
+      .send-me-header {
+        font-size: $font-size-normal;
+        color: $main-2;
+      }
+      .send-me-content {
+        font-size: $font-size-normal;
+        line-height: 24px;
+        padding: 20px 0px;
+        max-width: 300px;
+      }
+      @media (max-width: 650px) {
+        .send-me-content {
+          max-width: unset;
+        }
+      }
+      .request-button {
+        width: 100%;
+        height: 45px;
+        background-color: $main-14;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .request-review-txt {
+          font-weight: 600;
+          font-size: $font-size-small;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        .request-amount {
+          font-weight: 600;
+          font-size: $font-size-small;
+          text-align: right;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .roles-section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 25px 0px;
+      border-bottom: 1px solid $main-13;
+      max-height: fit-content;
+      background: $main-10;
+      .roles-header {
+        font-size: $font-size-normal;
+        color: $main-2;
+      }
+      .roles-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 300px;
+      }
+      @media (max-width: 650px) {
+        .roles-container {
+          max-width: unset;
+        }
+      }
+      .role-card {
+        width: fit-content;
+        max-height: fit-content;
+        padding: 10px 15px;
+        background: $main-11;
+        border-radius: 8px;
+        margin: 10px 10px 0px 0px;
+      }
+    }
+    .bio-section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 25px 0px;
+      background: $main-10;
+      .bio-header {
+        font-size: $font-size-normal;
+        color: $main-2;
+      }
+      .bio-content {
+        font-size: $font-size-normal;
+        line-height: 24px;
+        padding: 20px 0px;
+        max-width: 300px;
+      }
+      @media (max-width: 650px) {
+        .bio-content {
+          max-width: unset;
+        }
+      }
+    }
+  }
+  @media (min-width: 650px) {
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      border-radius: 5px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: $main-6;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: $main-5;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .profile-container {
+    min-width: 270px;
+    width: 100vw;
+  }
+}

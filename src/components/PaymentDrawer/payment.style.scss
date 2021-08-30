@@ -1,0 +1,152 @@
+@import "../../scss/variables.scss";
+
+.payment-container {
+  min-width: 350px;
+  height: 100vh;
+  background: $main-10;
+  color: $main-1;
+  display: flex;
+  flex-direction: column;
+  .payment-header-container {
+    padding: 27px 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .payment-main-container {
+    padding: 0 34px;
+    padding-top: 0px;
+    min-height: max-content;
+    height: calc(100vh - 85px);
+    position: relative;
+    overflow-y: auto;
+
+    .payment-title {
+      padding: 12px 0;
+      font-size: $font-size-22;
+      font-style: normal;
+      font-weight: $font-weight-1;
+    }
+
+    .payment-amount {
+      .payment-amount-title {
+        padding-top: 24px;
+        padding-bottom: 8px;
+        font-weight: $font-weight-4;
+        font-size: $font-size-normal;
+        line-height: 24px;
+        color: #5d5d5e;
+      }
+      .payable-amount {
+        font-weight: $font-weight-1;
+        font-size: $font-size-22;
+        line-height: 27px;
+      }
+      .payment-method-title {
+        font-size: $font-size-small;
+        line-height: 15px;
+        font-weight: $font-weight-4;
+        color: $main-2;
+        padding: 34px 0;
+      }
+    }
+
+    .card-list {
+      .card-item {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $main-17;
+        margin-bottom: 20px;
+        .card-item-right {
+          margin-left: 26px;
+          font-size: $font-size-small;
+          font-weight: $font-weight-1;
+        }
+      }
+    }
+
+    .another-card {
+      .another-card-item {
+        display: flex;
+        align-items: center;
+        padding-bottom: 24x;
+        .another-card-item-right {
+          margin-left: 26px;
+          font-size: $font-size-small;
+          font-weight: $font-weight-1;
+        }
+      }
+    }
+
+    .card-details-entry {
+      padding-top: 24px;
+      .card-name-title {
+        font-size: $font-size-small;
+        font-weight: 300;
+        color: $main-2;
+        &.pt24 {
+          padding-top: 24px;
+        }
+      }
+      .card-name-title-input {
+        width: 100%;
+        border: 0;
+        background: $main-11;
+        border-radius: 6px;
+        height: 44px;
+        font-size: $font-size-normal;
+        padding: 7px 12px;
+        box-sizing: border-box;
+        color: $main-1;
+        margin-top: 12px;
+      }
+      .card-expiry-cvc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 24px;
+        aside {
+          flex: 1;
+        }
+        .left {
+          margin-right: 16px;
+        }
+        .right {
+          margin-left: 16px;
+        }
+      }
+    }
+
+    .remember-card {
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .left {
+        font-size: $font-size-small;
+        font-weight: $font-weight-4;
+        width: 209px;
+      }
+      .right {
+        margin-left: 24px;
+      }
+    }
+
+    .pay-button {
+      margin-top: 24px;
+      border-top: 1px solid $main-17;
+
+      padding: 34px 0;
+      .pay-button-element {
+        font-weight: $font-weight-1;
+        font-size: $font-size-small;
+        min-width: unset;
+        width: 100%;
+        border-radius: 6px;
+        height: 44px;
+      }
+    }
+  }
+}

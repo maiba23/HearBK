@@ -1,0 +1,243 @@
+@import "../../scss/variables.scss";
+
+.personal-info-container {
+  width: 590px;
+  margin: 0 auto;
+  max-width: calc(100% - 80px);
+
+  .personal-info-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 44px;
+  }
+
+  .personal-info-dp {
+    padding-bottom: 34px;
+    text-align: center;
+
+    .selected-cover-area {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .edit-ico {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      .selected-dp-image {
+        width: 207px;
+        height: 207px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .cover-dropper-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .cover-dropper-wrapper {
+      width: 207px;
+      height: 207px;
+      border-radius: 50%;
+      border: 1px dashed $main-2;
+      &.error {
+        border-color: $main-8;
+      }
+    }
+    .cover-dropper-subtitle {
+      font-size: 12px;
+      line-height: 15px;
+      color: $main-2;
+      padding-top: 15px;
+    }
+  }
+
+  .personal-info-seperator {
+    height: 1px;
+    background: $main-12;
+  }
+
+  .personal-info-location {
+    padding: 34px 0;
+    .personal-info-location-title {
+      padding-bottom: 14px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    .location-picker {
+      position: relative;
+      .location-search-icon {
+        position: absolute;
+        left: 12px;
+        top: 10px;
+      }
+    }
+    .google-location-picker {
+      width: 100%;
+      padding: 10px 14px 10px 40px;
+      font-size: 12px;
+      line-height: 17px;
+      border-radius: 6px;
+      background: $main-11;
+      color: $main-1;
+      border: 0;
+      box-sizing: border-box;
+      &.error {
+        border: 1px solid $main-8;
+      }
+    }
+  }
+
+  .personal-info-gender-dob {
+    padding-top: 34px;
+    padding-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 670px) {
+      display: block;
+    }
+
+    .gender-section {
+      @media (max-width: 670px) {
+        padding-bottom: 8px;
+      }
+      .gender-section-title {
+        font-size: 14px;
+        line-height: 200%;
+        padding-bottom: 12px;
+      }
+      .gender-section-items {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .gender-item {
+        padding: 10px 16px;
+        font-size: 12px;
+        background: $main-11;
+        border-radius: 6px;
+        margin-right: 16px;
+        border: 1px solid $main-11;
+        cursor: pointer;
+        margin-bottom: 16px;
+
+        &.error {
+          border: 1px solid $main-8;
+        }
+
+        &.selected {
+          color: $main-11;
+          background: $main-2;
+          border: 1px solid $main-2;
+        }
+
+        &:last-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .dob-section {
+      .dob-section-title {
+        font-size: 14px;
+        line-height: 200%;
+        padding-bottom: 12px;
+      }
+      .dob-section-items {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .dob-input-field {
+        text-align: center;
+        background: $main-11;
+        width: 82px;
+        padding: 10px 16px;
+        box-sizing: border-box;
+        color: $main-1;
+        border: 0;
+        border-radius: 6px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        border: 1px solid $main-11;
+
+        &.error {
+          border: 1px solid $main-8;
+        }
+        &:last-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .personal-info-role {
+    padding-top: 34px;
+    padding-bottom: 18px;
+
+    .personal-info-role-title {
+      font-size: 14px;
+      line-height: 200%;
+      padding-bottom: 12px;
+    }
+
+    .personal-info-role-items {
+      display: flex;
+      flex-wrap: wrap;
+
+      .role-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 16px;
+        font-size: 12px;
+        background: $main-11;
+        border-radius: 6px;
+        margin-right: 16px;
+        border: 1px solid $main-11;
+        cursor: pointer;
+        margin-bottom: 16px;
+
+        &.selected {
+          background: $main-11 !important;
+          border: 1px solid $main-2;
+        }
+
+        .role-item-count {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          background: $main-2;
+          color: #000;
+          font-size: 14px;
+          font-weight: 600;
+          border-radius: 50%;
+          margin-left: 8px;
+        }
+
+        &:last-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .personal-info-button {
+    min-width: unset;
+    display: block;
+    width: 100%;
+    margin: 34px 0;
+    height: 44px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

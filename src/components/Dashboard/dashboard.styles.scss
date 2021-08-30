@@ -1,0 +1,284 @@
+@import "../../scss/variables.scss";
+
+.dashboard-main-container {
+  min-height: 100vh;
+  // changed because it was preventing scroll on track details
+  // min height created an strange issue on TRACKS, INFLUENCER, MAILS tab
+  // height: 100vh;
+  background: $main-9;
+  display: flex;
+  flex-direction: column;
+  color: $main-1;
+}
+.header-bar-main-container {
+  height: 70px; // on replacing above container this also needed change so
+  // min-height: 70px;
+  width: 100%;
+  border-bottom: 1px solid $main-12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .breaker-connect-img {
+    padding: 0px 40px;
+  }
+  .break-desktop-logout{
+    margin-left: 14px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .break-mobile-logo {
+    display: none;
+  }
+  .header-right-container {
+    align-items: center;
+    min-width: 76px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    .profile-img-header {
+      border-radius: 25px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .profile-img-header-selected {
+      opacity: 0.5;
+    }
+    .bell-icon {
+      margin-left: 25px;
+    }
+    .bell-white {
+      path {
+        fill: $main-1 !important;
+      }
+    }
+    .menu-mobile-icon {
+      display: none;
+    }
+  }
+  .tabs-container {
+    display: flex;
+    min-width: 230px; //340px;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    .tab-element {
+      height: 100%;
+      align-items: center;
+      display: flex;
+      padding: 0px 10px;
+      cursor: pointer;
+      .tab-text {
+        font-style: normal;
+        font-weight: 600;
+        font-size: $font-size-normal;
+        line-height: 9px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $main-1;
+      }
+    }
+    .selected-tab-element {
+      border-bottom: 2px solid $main-2;
+      .tab-text {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .header-bar-main-container {
+    .breaker-connect-img {
+      display: none;
+      object-fit: cover;
+    }
+    .break-mobile-logo {
+      display: flex;
+      min-width: 45px;
+      min-height: 45px;
+      margin-left: 25px;
+    }
+    .tabs-container {
+      display: none;
+    }
+    .header-right-container {
+      padding-right: 25px;
+      .menu-mobile-icon {
+        display: flex;
+        margin-right: 25px;
+      }
+    }
+  }
+}
+.search-bar-container {
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid $main-12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .search-input-container {
+    width: 278px;
+    height: 44px;
+    background: $main-10;
+    border-radius: 6px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 19px;
+    .search-input {
+      width: 100%;
+      margin-left: 15px;
+      background: $main-10;
+      border: none;
+      outline: none;
+      color: $main-1;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .search-bar-container {
+    justify-content: center;
+    .search-input-container {
+      margin-left: unset;
+      width: calc(100% - 80px);
+    }
+  }
+}
+.influencer-main-container {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  overflow: auto;
+  height: calc(100% - 225px);
+  .influencer-header {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 25px;
+  }
+  .influencer-section {
+    display: flex;
+    flex-wrap: wrap;
+    .influencer-profile-container {
+      width: 270px;
+      height: 270px;
+      background: $main-10;
+      border-radius: 6px;
+      margin: 20px 0px;
+      margin-right: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      .influencer-profile {
+        width: 134px;
+        height: 134px;
+        border-radius: 120px;
+        object-fit: cover;
+      }
+      .profile-name-container {
+        display: flex;
+      }
+      .influencer-profile-name {
+        font-style: normal;
+        font-weight: 600;
+        font-size: $font-size-l;
+        line-height: 22px;
+        color: $main-1;
+        margin-right: 10px;
+      }
+      .listener-roles {
+        font-size: $font-size-small;
+        line-height: 15px;
+        color: $main-1;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .influencer-main-container {
+    padding: 25px;
+    height: calc(100% - 195px);
+    .influencer-header {
+      margin-bottom: 15px;
+      width: 265px;
+      align-self: center;
+    }
+    .influencer-section {
+      justify-content: center;
+      .influencer-profile-container {
+        margin: 10px 0px;
+        margin-right: unset;
+      }
+    }
+  }
+}
+
+.tabs-main-container {
+  min-width: 300px;
+  color: $main-1;
+  display: flex;
+  flex-direction: column;
+  .tab-item-container {
+    padding: 25px;
+    border-bottom: 1px solid $main-13;
+    .tab-text {
+      font-style: normal;
+      font-weight: 600;
+      font-size: $font-size-normal;
+      line-height: 9px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: $main-1;
+    }
+    .selected-tab-text {
+      opacity: 0.3;
+    }
+  }
+  .close-icon {
+    margin: 25px;
+  }
+}
+@media (max-width: 650px) {
+  .tabs-main-container {
+    min-width: 270px;
+    width: 100vw;
+  }
+  .MuiDrawer-paperAnchorRight {
+    width: 100%;
+  }
+  .popover-component {
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+    width: 100%;
+    top: 0 !important;
+    right: 0 !important;
+    height: 100% !important;
+  }
+}
+
+.MuiPopover-paper {
+  background: $main-11 !important;
+  border-radius: 6px !important;
+}
+
+.popover-component {
+  top: 65px;
+  right: 35px;
+  position: absolute;
+  overflow-y: auto;
+  min-height: 40vh;
+  max-height: 90vh;
+}

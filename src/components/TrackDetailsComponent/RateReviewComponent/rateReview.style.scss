@@ -1,0 +1,82 @@
+@import "../.././../scss/variables.scss";
+
+.rate-review-container {
+  min-width: 350px;
+  height: 100vh;
+  background: $main-10;
+  color: $main-1;
+  display: flex;
+  flex-direction: column;
+
+  .rate-review-header-container {
+    padding: 27px 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .rate-review-main-container {
+    padding: 0 34px;
+    padding-top: 0px;
+    min-height: max-content;
+    height: calc(100vh - 85px);
+    position: relative;
+    overflow-y: auto;
+
+    .rate-review-title {
+      padding: 12px 0;
+      font-size: $font-size-22;
+      font-style: normal;
+      font-weight: $font-weight-1;
+    }
+
+    .rate-review-subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      color: $main-5;
+      width: 284px;
+      line-height: 24px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+
+      &.comment {
+        color: $main-2;
+        padding-bottom: 12px;
+      }
+    }
+
+    .rate-review-comment {
+      background: $main-11;
+      border: 0;
+      color: $main-1;
+      width: 100%;
+      height: 140px;
+      border-radius: 6px;
+      padding: 12px;
+      box-sizing: border-box;
+    }
+
+    .rate-review-actions {
+      padding: 34px 0;
+      .rate-review-button-alt {
+        width: 100%;
+        min-width: unset;
+        background: $main-11;
+        color: $main-1;
+        font-size: 12px;
+        font-weight: 600;
+        height: 48px;
+      }
+      .rate-review-button {
+        width: 100%;
+        min-width: unset;
+        background: $main-2;
+        color: $main-11;
+        font-size: 12px;
+        font-weight: 600;
+        height: 48px;
+        cursor: pointer;
+      }
+    }
+  }
+}

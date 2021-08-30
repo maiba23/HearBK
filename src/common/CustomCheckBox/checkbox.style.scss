@@ -1,0 +1,15 @@
+.check-box-outer {
+    height: 20px;
+    width: 20px;
+    border: 1px solid #5d5d5e;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    .check-box-inner {
+      background: #c8a86b;
+      border-radius: 5px;
+      height: 16px;
+      width: 16px;
+    }
+  }

@@ -1,0 +1,174 @@
+@import "../../scss/variables.scss";
+
+.track-status-container {
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid $main-12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s linear;
+  .status-button-container {
+    display: flex;
+    height: 100%;
+    padding-left: 40px;
+    .status-button-1 {
+      margin-left: 40px;
+    }
+    .status-button {
+      margin-left: 34px;
+      font-weight: $font-weight-4;
+      font-size: $font-size-normal;
+      line-height: 9px;
+      color: $main-1;
+      height: 100%;
+      align-items: center;
+      display: flex;
+      cursor: pointer;
+    }
+    .selected-status-element {
+      border-bottom: 2px solid $main-2;
+      .tab-text {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+.track-container-header {
+  font-weight: $font-weight-1;
+  font-size: 22px;
+  line-height: 27px;
+  margin: 40px;
+}
+.view-status-container-1 {
+  height: 100%;
+  min-height: calc(98vh - 71px - 71px); //100% was not taking space so this added 71,71 are two nav heights
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .no-track-container {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    flex-direction: column;
+    .no-track-span-text {
+      font-size: $font-size-medium;
+      line-height: $font-size-xl;
+      text-align: center;
+      color: $main-5;
+      padding-top: 20px;
+    }
+  }
+}
+.view-status-container {
+  height: 100%;
+  display: flex;
+  padding-left: 40px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  .track-container {
+    flex-wrap: wrap;
+    overflow-y: auto;
+  }
+}
+.add-button {
+  font-size: 44px;
+  line-height: 9px;
+  text-transform: uppercase;
+}
+@media (max-width: 650px) {
+  .view-status-container {
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+@media (max-width: 650px) {
+  .view-status-container-1 {
+    justify-content: center;
+  }
+
+  .track-status-container {
+    .status-button-container {
+      padding-left: 0;
+    }
+  }
+}
+
+.track-card-root-container {
+  height: 270px;
+  width: 270px;
+  border-radius: 6px;
+  margin: 20px 0px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-size: cover !important;
+  cursor: pointer;
+
+  .track-icon {
+    height: inherit;
+    width: inherit;
+  }
+  .track-info-container {
+    margin: 0px 20px 30px;
+
+    .track-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .status-div-container {
+      background-color: $main-2;
+      border-radius: 4px;
+      padding: 4px 12px 4px 6px;
+      margin: 6px 0px 9px 0px;
+      width: fit-content;
+      .status-span-container {
+        color: #000000;
+        opacity: 0.8;
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: normal;
+      }
+      .status-play-icon {
+        height: 10px;
+        width: 8px;
+        margin: 0px 6px 0px 5px;
+      }
+      .status-tick-icon {
+        height: 8px;
+        width: 10px;
+        margin: 0px 6px 0px 5px;
+      }
+    }
+    .rating-container {
+      display: flex;
+      column-gap: 10px;
+      .span-image-container {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #c8a86b 0%, #725e3a 100%), #c4c4c4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .rating-text {
+        color: $main-1;
+        align-items: center;
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: $font-weight-1;
+      }
+    }
+  }
+}
+
+.floating-add-button {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}

@@ -1,0 +1,130 @@
+@import "../../scss/variables.scss";
+
+.genres-main-container {
+  display: flex;
+  justify-content: center;
+  .genres-inner-container {
+    width: 700px;
+    padding: 15px;
+    padding-top: 50px;
+    .genres-header-txt {
+      font-size: 22px;
+      align-self: center;
+      justify-content: center;
+      display: flex;
+      text-align: center;
+    }
+    .music-like-txt {
+      font-size: $font-size-normal;
+      color: $main-5;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .favorite-genres {
+      font-size: $font-size-normal;
+      margin-top: 50px;
+    }
+    .genres-container {
+      padding: 40px 0px;
+      border-bottom: 1px solid $main-13;
+      display: flex;
+      flex-wrap: wrap;
+      .selected-number {
+        background: $main-2;
+        padding: 0px 6px;
+        margin-left: 10px;
+        color: $main-3;
+        border-radius: 17px;
+      }
+      .genres-tag-container {
+        background: $main-11;
+        border-radius: 8px;
+        padding: 10px 15px;
+        width: fit-content;
+        font-size: $font-size-normal;
+        margin-right: 15px;
+        margin-bottom: 15px;
+      }
+      .selected-genre-tag {
+        border: 1px solid $main-2;
+      }
+    }
+    .genre-button {
+      width: 100%;
+      margin-top: 40px;
+      font-weight: 600;
+    }
+  }
+}
+
+.styles-main-container {
+  background: #18181a;
+  min-width: 300px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  .close-icon {
+    margin-bottom: 30px;
+  }
+  .styles-header {
+    font-weight: 600;
+    font-size: $font-size-normal;
+    line-height: 200%;
+    color: $main-1;
+  }
+  .styles-container {
+    margin-top: 25px;
+    overflow: auto;
+    max-height: calc(100vh - 270px);
+  }
+  .checkbox-label {
+    font-size: 16px;
+    line-height: 20px;
+    color: $main-1;
+    margin-left: 10px;
+  }
+  .done-button {
+    background: $main-2;
+    border: 1px solid $main-2;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: $main-1;
+    font-size: $font-size-15;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    height: 60px;
+    margin-top: 25px;
+    outline: none;
+  }
+  .done-button-disable {
+    background: $main-2;
+    border: 1px solid $main-2;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: $main-1;
+    font-size: $font-size-15;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    height: 60px;
+    margin-top: 25px;
+    opacity: 0.5;
+  }
+  .sub-role-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(34, 34, 35);
+    align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  .styles-main-container {
+    width: calc(100vw - 50px);
+    min-width: 250px;
+  }
+}

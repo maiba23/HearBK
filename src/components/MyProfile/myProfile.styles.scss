@@ -1,0 +1,32 @@
+@import "../../scss/variables.scss";
+
+.profile-tab-container {
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid $main-12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .profile-button-container {
+    display: flex;
+    height: 100%;
+    padding-left: 40px;
+    overflow-x: auto;
+  }
+}
+.profile-root-view-container {
+  height: 100%;
+  width: 903px;
+  margin: 0 auto;
+  max-width: calc(100% - 40px);
+  // display: flex;
+  overflow: hidden;
+}
+
+@media (max-width: 650px) {
+  .profile-tab-container {
+    .profile-button-container {
+      padding-left: 0;
+    }
+  }
+}

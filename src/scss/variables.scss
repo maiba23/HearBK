@@ -1,0 +1,65 @@
+// colors:
+
+$main-1: #fff;
+$main-2: #c8a86b;
+$main-3: #222223;
+$main-4: #18181a;
+$main-5: #5d5d5e;
+$main-6: #434344;
+$main-7: #252525;
+$main-8: #cd4242;
+$main-9: #020106;
+$main-10: #0c0c10;
+$main-11: #19181c;
+$main-12: #eef0fa33;
+$main-13: #eef0fa1a;
+$main-14: #7551e9;
+$main-15: #131313;
+$main-16: #42ae55;
+$main-17: rgba(238, 240, 250, 0.1);
+
+//font size:
+$font-size-44: 44px;
+$font-size-40: 40px;
+$font-size-34: 34px;
+$font-size-32: 32px;
+$font-size-28: 28px;
+$font-size-26: 26px;
+$font-size-22: 22px;
+$font-size-xxl: 24px;
+$font-size-xl: 20px;
+$font-size-l: 18px;
+$font-size-17: 17px;
+$font-size-medium: 16px;
+$font-size-normal: 14px;
+$font-size-15: 15px;
+$font-size-small: 12px;
+$font-size-xs: 10px;
+$font-size-xxs: 8px;
+$font-size-xxxl: 48px;
+$font-size-38: 38px;
+$font-size-13: 13px;
+$font-size-25: 25px;
+$font-size-30: 30px;
+
+//font weight:
+
+$font-weight-1: 600;
+$font-weight-2: 800;
+$font-weight-3: 900;
+$font-weight-4: 400;
+
+//font family:
+
+// Media query breakpoints
+$breakpoints: (
+  "phone": 400px,
+  "phone-wide": 480px,
+  "phablet": 560px,
+  "tablet-small": 640px,
+  "tablet": 768px,
+  "tablet-wide": 991px,
+  "desktop-small": 1025px,
+  "desktop": 1441px,
+  "desktop-wide": 1921px,
+);

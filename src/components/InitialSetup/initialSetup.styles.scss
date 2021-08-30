@@ -1,0 +1,53 @@
+@import "../../scss/variables.scss";
+
+.initial-setup-main-container {
+  min-height: 100vh;
+  background: $main-9;
+  display: flex;
+  flex-direction: column;
+  color: $main-1;
+  .initial-header-container {
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid $main-12;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .breaker-connect-img {
+      padding: 0px 40px;
+    }
+    .break-mobile-logo {
+        display: none;
+    }
+    .header-signIn-txt {
+        position: absolute;
+        left: 50%;
+        font-size: $font-size-normal;
+    }
+  }
+  .initial-tab-container {
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid $main-12;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+  }
+}
+@media (max-width: 650px) {
+    .initial-setup-main-container {
+        .initial-header-container{
+            .breaker-connect-img {
+              display: none;
+              object-fit: cover;
+            }
+            .break-mobile-logo {
+              display: flex;
+              min-width: 45px;
+              min-height: 45px;
+              margin-left: 25px;
+            }
+        }
+    }
+  }

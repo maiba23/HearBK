@@ -1,0 +1,342 @@
+@import "../../../../scss/variables.scss";
+
+.inf-sett-main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .setting-inner-container {
+    min-width: 800px;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    height: 100%;
+    margin-bottom: 50px;
+    .influencer-setting-header {
+      font-weight: 600;
+      font-size: $font-size-22;
+      line-height: 27px;
+      margin-bottom: 40px;
+    }
+    .influencer-second-container {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      // border-bottom: 1px solid $main-12;
+      .sec-first-container {
+        max-width: 300px;
+        margin-bottom: 40px;
+        .approval-rating {
+          font-size: $font-size-normal;
+          line-height: 200%;
+          color: $main-2;
+        }
+        .approval-rating-content {
+          font-size: $font-size-normal;
+          line-height: 24px;
+          color: $main-5;
+          margin-bottom: 30px;
+        }
+        .review-price-container {
+          display: flex;
+          flex-direction: column;
+          margin-top: 20px;
+          .price-container {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            .price-input {
+              min-width: 235px;
+              margin-left: 20px;
+              height: 44px;
+              background: $main-10;
+              border-radius: 6px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 0px 19px;
+              border: none;
+              outline: none;
+              color: $main-1;
+            }
+          }
+        }
+      }
+      .sec-second-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 35px;
+        width: calc(100% - 335px);
+        .send-me-header {
+          font-size: $font-size-normal;
+          line-height: 200%;
+          color: $main-2;
+          margin-bottom: 20px;
+        }
+        .send-me-txt-field {
+          min-width: 235px;
+          min-height: 230px;
+          background: $main-10;
+          border-radius: 6px;
+          padding: 20px;
+          border: none;
+          outline: none;
+          color: $main-1;
+        }
+      }
+      .save-button {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: $font-size-small;
+        min-width: 300px;
+      }
+    }
+    .payment-method-container {
+      border-bottom: 1px solid $main-12;
+      .header-container {
+        margin: 40px 0px;
+      }
+      .payment-receive-header {
+        font-size: $font-size-normal;
+        line-height: 200%;
+        color: $main-2;
+        margin-bottom: 20px;
+      }
+      .card-detail-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 15px 0px;
+        .card-detail-delete-icon {
+          cursor: pointer;
+        }
+        .card-last-digits {
+          margin-left: 25px;
+        }
+        .default-txt {
+          font-size: $font-size-small;
+          margin-right: 15px;
+        }
+        .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
+          background-color: $main-2;
+        }
+      }
+    }
+    .add-another-container {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid $main-12;
+      padding: 40px 0px;
+      .add-another-btn {
+        width: 278px;
+        height: 44px;
+        background: $main-11;
+        border-radius: 6px;
+        color: $main-1;
+      }
+    }
+    .transaction-history-container {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid $main-12;
+      padding: 40px 0px;
+      .transaction-history-header {
+        font-size: $font-size-normal;
+        line-height: 200%;
+        color: $main-2;
+        margin-bottom: 20px;
+      }
+      .transaction-history-card {
+        display: flex;
+        justify-content: space-between;
+        .amount-last-digit {
+          font-weight: 600;
+          font-size: $font-size-l;
+          line-height: 22px;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .transaction-time-container {
+          display: flex;
+          flex-direction: column;
+          font-size: $font-size-small;
+          .time-txt {
+            color: $main-2;
+          }
+        }
+        .received-btn {
+          width: 90px;
+          min-width: 90px;
+          height: 24px;
+          background: #42ae55;
+          border-radius: 4px;
+          font-size: $font-size-xs;
+          line-height: 200%;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .inf-sett-main-container {
+    .setting-inner-container {
+      min-width: 230px;
+      height: fit-content;
+      padding: 25px;
+      .influencer-second-container {
+        flex-direction: column;
+        .sec-first-container .review-price-container .price-container .price-input {
+          min-width: 180px;
+        }
+        .sec-second-container {
+          width: 100%;
+          margin-left: unset;
+          .send-me-txt-field {
+            min-width: 200px;
+          }
+        }
+        .save-button {
+          min-width: 250px;
+        }
+      }
+      .add-another-container .add-another-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+      .transaction-history-container {
+        .transaction-history-card {
+          .amount-last-digit {
+            font-size: $font-size-normal;
+            margin-right: 10px;
+          }
+          .transaction-time-container {
+            font-size: $font-size-xs;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.paymentInputContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  .addPaymentHeader {
+    color: $main-1;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .titleLabel {
+    font-size: $font-size-small - 1;
+    letter-spacing: 1.1px;
+    font-weight: 500;
+    color: $main-2;
+  }
+  .titleInput {
+    border: none;
+    padding: 15px;
+    margin-top: 17px;
+    margin-bottom: 22px;
+    background: $main-11;
+    border-radius: 6px;
+    min-width: 30px;
+    color: $main-1;
+    outline: none;
+  }
+}
+.cardDetailsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid $main-13;
+  .expiry-container {
+    min-width: 100px;
+  }
+}
+.payment-add-btn {
+  margin-top: 35px;
+}
+.saveCardContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  .checkBoxStyle {
+    height: 20px;
+    width: 20px;
+  }
+  .saveCardText {
+    margin-left: 10px;
+    font-size: $font-size-small;
+    color: $main-2;
+  }
+}
+
+.non-influencer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  max-width: 280px;
+  text-align: center;
+  .non-influencer-txt {
+    margin-top: 30px;
+    font-size: $font-size-medium;
+    line-height: 20px;
+    text-align: center;
+    color: $main-5;
+  }
+}
+
+.influencer-setting-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    cursor: pointer;
+  }
+}
+
+.quality-control-container {
+  min-width: 350px;
+  height: 100vh;
+  background: $main-10;
+  color: $main-1;
+  display: flex;
+  flex-direction: column;
+
+  .quality-control-header-container {
+    padding: 27px 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .quality-control-main-container {
+    padding: 0 34px;
+    padding-top: 0px;
+    min-height: max-content;
+    height: calc(100vh - 85px);
+    position: relative;
+    overflow-y: auto;
+
+    .quality-control-title {
+      padding-top: 12px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+    }
+    .quality-control-details {
+      margin-top: 34px;
+      font-size: 14px;
+      width: 284px;
+      line-height: 22px;
+      color: $main-1;
+      font-weight: 400;
+    }
+  }
+}

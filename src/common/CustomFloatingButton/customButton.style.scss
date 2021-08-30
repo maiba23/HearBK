@@ -1,0 +1,14 @@
+.button-root-container {
+  height: 88px;
+  width: 88px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #c8a86b 0%, #725e3a 100%);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  @media (max-width: 650px) {
+    height: 66px;
+    width: 66px;
+  }
+}

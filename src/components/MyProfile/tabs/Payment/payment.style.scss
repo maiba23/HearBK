@@ -1,0 +1,103 @@
+@import "../../../../scss/variables.scss";
+
+.payment-tab-container {
+  width: 903px;
+  margin: 0 auto;
+  max-width: calc(100% - 80px);
+
+  .cancel-pro-subscription {
+    margin-top: 24px;
+    background: $main-11;
+    border-radius: 6px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 44px;
+
+    @media (max-width: 670px) {
+      padding: 24px 40px;
+    }
+
+    .cancel-pro-title {
+      font-size: $font-size-small;
+      font-weight: $font-weight-4;
+      padding-bottom: 6px;
+    }
+    .cancel-pro-amount {
+      font-size: $font-size-22;
+      font-weight: $font-weight-1;
+      line-height: 27px;
+    }
+
+    .cancel-pro-button {
+      min-width: 254px;
+      height: 44px;
+      font-weight: $font-weight-1;
+      font-size: $font-size-small;
+      border: 1px solid $main-2;
+      background-color: transparent;
+      color: $main-1;
+      @media (max-width: 670px) {
+        min-width: 120px;
+      }
+    }
+  }
+
+  .active-plan-title {
+    font-size: $font-size-normal;
+    line-height: 200%;
+    color: $main-2;
+    margin-top: 24px;
+  }
+
+  .payment-tab-method-container {
+    border-bottom: 1px solid $main-12;
+    .title {
+      padding-top: 34px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .header-container {
+      margin: 40px 0px;
+    }
+    .payment-receive-header {
+      font-size: $font-size-normal;
+      line-height: 200%;
+      color: $main-2;
+      margin-bottom: 20px;
+    }
+    .card-detail-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 15px 0px;
+      .card-detail-delete-icon {
+        cursor: pointer;
+      }
+      .card-last-digits {
+        margin-left: 25px;
+      }
+      .default-txt {
+        font-size: $font-size-small;
+        margin-right: 15px;
+      }
+      .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
+        background-color: $main-2;
+      }
+    }
+  }
+  .add-tab-another-container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $main-12;
+    padding: 40px 0px;
+    .add-another-btn {
+      width: 278px;
+      height: 44px;
+      background: $main-11;
+      border-radius: 6px;
+      color: $main-1;
+    }
+  }
+}

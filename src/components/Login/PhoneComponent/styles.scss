@@ -1,0 +1,93 @@
+@import "../../../scss/variables.scss";
+
+.track-input-label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-small;
+  line-height: 15px;
+  color: $main-2;
+}
+.error-message-label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-small;
+  line-height: 15px;
+  color: $main-8;
+}
+.phone-number-header {
+  display: flex;
+  justify-content: space-between;
+}
+.phone-number-container {
+  display: flex;
+  .dropdown-icon {
+    width: 15px;
+    height: 15px;
+  }
+  // .makeStyles-selectEmpty-2,
+  .MuiInputBase-root {
+    width: 100%;
+    height: 47px;
+    background: $main-3;
+    border-radius: 8px !important;
+    color: $main-1 !important;
+    border: none !important;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 15px;
+    margin-top: 0 !important;
+    outline: none !important;
+    .MuiSelect-selectMenu {
+      height: 47px;
+      display: flex;
+      z-index: 100;
+      align-items: center;
+    }
+  }
+  .MuiSelect-outlined.MuiSelect-outlined {
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 0px !important;
+  }
+  .makeStyles-formControl-1 {
+    // margin: 10px 0px !important;
+    // min-width: 50px !important;
+  }
+}
+.phone-root-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.phone-number-input {
+  width: 250px;
+  min-width: unset;
+  height: 44px;
+  left: 414px;
+  top: 508px;
+  background: $main-3;
+  border-radius: 8px;
+  color: $main-1;
+  margin-top: 10px;
+  border: none;
+  padding-left: 15px;
+  outline: none;
+  font-size: 15px;
+}
+.phone-number-phone {
+  width: calc(70% - 15px) !important;
+  &.phone-number-phoneSidebar {
+    width: 180px !important;
+  }
+}
+.phone-number-phone-safari-ipad-iphone {
+  min-height: 43.8px;
+}
+.phone-number-phone-safari-mac {
+  min-height: 50px;
+}
+.error-border {
+  border: 1px solid $main-8 !important;
+}

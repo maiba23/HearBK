@@ -1,0 +1,11 @@
+@import "../../scss/variables.scss";
+
+.common-button {
+  min-width: 250px;
+  height: 44px;
+  background: #c8a86b;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

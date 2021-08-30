@@ -1,0 +1,164 @@
+@import "../../scss/variables.scss";
+
+.activity-main-container {
+    min-width: 280px;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    background: $main-11;
+    border-radius: 6px;
+    color: $main-1;
+    padding: $font-size-15;
+    .header {
+      display: none;
+      .header-text {
+        margin-left: $font-size-30;
+        font-size: $font-size-normal;
+        font-weight: $font-weight-1;
+      }
+    }
+    .activity-close-icon {
+      display: none;
+      width: $font-size-normal;
+      height: $font-size-normal;
+    }
+    .activity-container {
+      overflow: auto;
+      .activity-data-container {
+        display: flex;
+        justify-content: space-between;
+        padding: $font-size-xs $font-size-xs $font-size-15 $font-size-xs;
+        align-items: center;
+        .profile-image {
+          width: $font-size-40;
+          height: $font-size-40;
+          border-radius: 50%;
+        }
+        .user-details {
+          display: flex;
+          flex-direction: column;
+          margin-left: $font-size-xs;
+          justify-content: center;
+          .user-name {
+            font-size: $font-size-13;
+            width: 80%;
+          }
+          .message {
+            font-size: $font-size-13;
+            color: $main-1;
+            opacity: 0.4;
+          }
+          .role {
+              font-size: $font-size-normal;
+              padding-left: 5px;
+          }
+          .user {
+              font-size: $font-size-normal;
+          }
+        }
+        .time {
+          font-size: $font-size-xs;
+          color: $main-2;
+          height: fit-content;
+        }
+      }
+    }
+    .room-story {
+        position: relative;
+        display: block;
+        text-align: center;
+        .room-image {
+            width: 250px;
+            height: 250px;
+            opacity: 0.9;
+        }
+        .room-detail {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: $font-size-xl;
+            left: 50px;
+            text-align: left;
+            .heading {
+                width: 80%;
+                font-weight: $font-weight-1;
+            }
+            .user {
+                opacity: 0.7;
+                font-size: $font-size-13;
+            }
+            .event-time {
+                color: $main-2;
+                font-size: $font-size-small;
+            }
+        }
+        .room-user-profile {
+            width: $font-size-25;
+            height: $font-size-25;
+            border-radius: 50%;
+            position: absolute;
+            top: $font-size-25;
+            left: $font-size-40;
+        }
+        .nodification {
+            width: $font-size-34;
+            height: $font-size-34;
+            position: absolute;
+            right: $font-size-34;
+            top: $font-size-25;
+        }
+    }
+    .default-display {
+        display: flex;
+    }
+  }
+  @media (max-width: 650px) {
+    .activity-main-container {
+      width: 100%;
+      color: $main-1;
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      height: 100%;
+      background-color: $main-9;
+      .header {
+        display: flex;
+        align-items: center;
+        height: 68px;
+        border-bottom: 1px solid $main-13;
+        padding-left: $font-size-25;
+      }
+      .activity-close-icon {
+        display: flex;
+      }
+      .activity-container {
+        padding: $font-size-xs $font-size-13;
+        overflow-y: auto;
+        height: calc(100% - 68px);
+      }
+      .room-story {
+          .room-image {
+              width: 95%;
+              height: 300px;
+          }
+          .room-detail {
+              bottom: $font-size-34;
+              .heading {
+                  width: 100%;
+                  padding-bottom: 5px;
+              }
+              .user {
+                  padding-bottom: 5px;
+              }
+          }
+          .room-user-profile {
+              top: $font-size-34;
+              left: 50px;
+          }
+      }
+    }
+  }
+  .MuiPopover-paper {
+    background: $main-11 !important;
+    border-radius: 6px !important;
+  }

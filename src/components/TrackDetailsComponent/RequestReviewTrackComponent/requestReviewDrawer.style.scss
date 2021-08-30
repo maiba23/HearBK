@@ -1,0 +1,135 @@
+@import "../.././../scss/variables.scss";
+
+.request-review-drawer-container {
+  min-width: 350px;
+  height: 100vh;
+  background: $main-10;
+  color: $main-1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .request-review-drawer-header-container {
+    padding: 27px 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .request-review-drawer-main-container {
+    padding: 0 34px;
+    padding-top: 0px;
+    min-height: max-content;
+    height: calc(100vh - 85px - 92px);
+    position: relative;
+    overflow-y: auto;
+
+    .request-review-drawer-title {
+      padding: 12px 0;
+      font-size: $font-size-22;
+      font-style: normal;
+      font-weight: $font-weight-1;
+    }
+
+    .request-review-drawer-subtitle {
+      padding-top: 12px;
+      padding-bottom: 34px;
+      color: $main-5;
+      width: 283px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .request-review-influencer-search {
+      display: flex;
+      align-items: center;
+      height: 44px;
+      background: $main-11;
+      border-radius: 6px;
+      margin-bottom: 34px;
+
+      img {
+        margin-right: 16px;
+        margin-left: 16px;
+      }
+      .influencer-search {
+        background: transparent;
+        color: $main-1;
+        border: 0;
+        flex: 1;
+        font-size: 14px;
+        font-weight: 400;
+        outline: none;
+      }
+    }
+
+    .influencer-list {
+      .influencer-list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 34px;
+      }
+      .influencer-list-item-left {
+        display: flex;
+        align-items: center;
+      }
+      .influencer-list-item-right {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgba($main-1, 0.8);
+      }
+
+      .influencer-details {
+        display: flex;
+        img {
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+          margin-left: 26px;
+          margin-right: 16px;
+        }
+        .details {
+          .name {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 15px;
+            color: rgba($main-1, 0.8);
+            padding-bottom: 4px;
+          }
+          .score {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15px;
+            color: $main-5;
+          }
+        }
+      }
+    }
+  }
+  .request-button {
+    height: 44px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 24px;
+    left: 34px;
+    width: calc(100% - 68px);
+  }
+
+  .select-button {
+    height: 44px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 24px;
+    left: 34px;
+    width: calc(100% - 68px);
+    color: $main-1;
+    background: $main-15;
+  }
+}

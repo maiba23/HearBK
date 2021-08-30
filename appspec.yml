@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: ./build/
+    destination: /var/www/newpwa
+hooks:
+  AfterInstall:
+    - location: ./restart.sh
+      timeout: 300
+      runas: ubuntu
+  BeforeInstall:
+    - location: ./rmrf.sh
+      timeout: 300
+      runas: root
